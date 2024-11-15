@@ -10,7 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	printchar(char c)
+#include "printf.h"
+
+int	printchar(int c)
 {
-	
+	return (write(1, &c, 1));
 }
