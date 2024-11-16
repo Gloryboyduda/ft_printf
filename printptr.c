@@ -6,8 +6,16 @@
 /*   By: duandrad <duandrad@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 19:34:30 by duandrad          #+#    #+#             */
-/*   Updated: 2024/11/14 19:34:46 by duandrad         ###   ########.fr       */
+/*   Updated: 2024/11/16 00:51:59 by duandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "printf.h"
+
 int	printptr(void *)
+{
+	int count;
+
+	count = 0;
+	
+}
