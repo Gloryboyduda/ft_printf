@@ -10,4 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	printpercent();
+#include "printf.h"
+
+int	printpercent(int c)
+{
+	c = (char)'%';
+	write(1, &c, 1);
+	return(1);
+}
+
+/* int main()
+{
+	printf("%c", printpercent('%'));
+	return 0;
+} */

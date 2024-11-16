@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printu.c                                           :+:      :+:    :+:   */
+/*   printupx.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: duandrad <duandrad@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/14 19:36:10 by duandrad          #+#    #+#             */
-/*   Updated: 2024/11/16 00:00:04 by duandrad         ###   ########.fr       */
+/*   Created: 2024/11/14 19:35:42 by duandrad          #+#    #+#             */
+/*   Updated: 2024/11/14 19:35:51 by duandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
- #include "printf.h"
+#include "printf.h"
 
-int	printu(unsigned int n)
+int	printupx(long nbr)
 {
-	int count = 0;
+	int	count;
+	char *symbs;
 
-	if (n < 10)
-		count += printchar(n + '0');
-	else
+	symbs = "0123456789ABCDEF";
+	count = 0;
+	if (nbr < 0)
 	{
-		count += printu(n / 10);
-		count += printu(n % 10);
+		write(1, "-", 1);
+		return (printupx(-nbr) + 1);
 	}
-	return (count);
+	else if (nbr < 16)
+		return (printchar(symbs[nbr]));
+	else
+		{
+			count = printupx(nbr / 16);
+			return (count + printupx(nbr % 16));
+		}
 }

@@ -21,9 +21,12 @@
 
 int	printchar(int c);
 int	printstr(char *str);
-int	printdig(long nbr, int base);
-int	printHexa(long nbr, int base);
-
+int	printdig(long nbr);
+int	printlowx(long nbr);
+int	printupx(long nbr);
+int	printu(unsigned int n);
+int	ft_printf(const char *format, ...);
+int	printpercent(int c);
 
 
 

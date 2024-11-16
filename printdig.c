@@ -12,7 +12,7 @@
 
 #include "printf.h"
 
-int	printdig(long nbr, int base)
+int	printdig(long nbr)
 {
 	int count;
 	char *symbs;
@@ -22,13 +22,13 @@ int	printdig(long nbr, int base)
 	if (nbr < 0)
 	{
 		write(1, "-", 1);
-		return (printdig(-nbr, base) + 1);
+		return (printdig(-nbr) + 1);
 	}
-	else if (nbr < base)
+	else if (nbr < 10)
 		return (printchar(symbs[nbr]));
 	else
 		{
-			count = printdig(nbr / base, base);
-			return (count + printdig(nbr % base, base));
+			count = printdig(nbr / 10);
+			return (count + printdig(nbr % 10));
 		}
 }

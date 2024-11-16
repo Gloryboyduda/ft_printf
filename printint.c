@@ -1,13 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printdec.c                                         :+:      :+:    :+:   */
+/*   printint.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: duandrad <duandrad@student.42lisboa>       +#+  +:+       +#+        */
+/*   By: duandrad <duandrad@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/14 19:35:04 by duandrad          #+#    #+#             */
-/*   Updated: 2024/11/16 00:00:39 by duandrad         ###   ########.fr       */
+/*   Created: 2024/11/16 18:27:23 by duandrad          #+#    #+#             */
+/*   Updated: 2024/11/16 18:27:23 by duandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+/* 
+#include "printf.h"
 
-int	printdec(int x);
+int	printint(int n)
+{
+	int	count;
+
+	count = 0;
+
+} */
