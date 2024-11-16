@@ -17,7 +17,7 @@ int	printdig(long nbr, int base)
 	int count;
 	char *symbs;
 
-	symbs = "0123456789abcdef";
+	symbs = "0123456789";
 	count = 0;
 	if (nbr < 0)
 	{

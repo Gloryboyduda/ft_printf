@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "printf.h"
+#include <stdint.h>
 
 int	print_format(char type, va_list pt)
 {
@@ -22,10 +23,10 @@ int	print_format(char type, va_list pt)
 	else if (type == 's')
 		count += printstr(va_arg(pt, char *));
 	/*else if (type == 'p')
-		count += printptr(va_arg(pt, void *));
+		count += printptr(va_arg(pt, void *));*/
 	else if (type == 'd')
-		count += printdec((long)va_arg(pt, int), 10);
-	else if (type == 'i')
+		count += printdig((long)va_arg(pt, int), 10);
+	/*else if (type == 'i')
 		count += printint(va_arg(pt, int), 10);
 	else if (type == 'u')
 		count += printu(va_arg(pt, unsigned int));
@@ -59,7 +60,7 @@ int	ft_printf(const char *format, ...)
 
 int main()
 {
-	printf("em hexadec e: %x\n", INT_MIN);
-	ft_printf("em hexadec e: %x\n", INT_MIN);
+	printf(":%c:\n", '0');
+	ft_printf(":%c:\n", '0');
 	return 0;
 }

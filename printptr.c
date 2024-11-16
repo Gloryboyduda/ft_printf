@@ -17,5 +17,5 @@ int	printptr(void *)
 	int count;
 
 	count = 0;
-	
+	return count;
 }
