@@ -1,7 +1,7 @@
 NAME = libftprintf.a
 SRCS = $(wildcard *.c) 
 OBJS = $(SRCS:.c=.o)
-INCLUDE = printf.h
+INCLUDE = ft_printf.h
 LIBC = ar rcs $(NAME)
 CC = gcc
 CCFLAGS = -Wall -Wextra -Werror -g

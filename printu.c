@@ -6,11 +6,11 @@
 /*   By: duandrad <duandrad@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 19:36:10 by duandrad          #+#    #+#             */
-/*   Updated: 2024/11/16 00:00:04 by duandrad         ###   ########.fr       */
+/*   Updated: 2024/11/17 21:24:19 by duandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	printu(unsigned int n)
 {

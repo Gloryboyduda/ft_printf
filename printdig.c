@@ -6,11 +6,11 @@
 /*   By: duandrad <duandrad@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 19:35:42 by duandrad          #+#    #+#             */
-/*   Updated: 2024/11/14 19:35:51 by duandrad         ###   ########.fr       */
+/*   Updated: 2024/11/17 21:22:49 by duandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	printdig(long nbr)
 {
