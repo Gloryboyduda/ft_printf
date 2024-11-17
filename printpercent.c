@@ -14,13 +14,7 @@
 
 int	printpercent(int c)
 {
-	c = (char)'%';
+	c = (char) '%';
 	write(1, &c, 1);
-	return(1);
+	return (1);
 }
-
-/* int main()
-{
-	printf("%c", printpercent('%'));
-	return 0;
-} */

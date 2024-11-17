@@ -10,12 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
- #include "printf.h"
+#include "printf.h"
 
 int	printu(unsigned int n)
 {
-	int count = 0;
+	int	count;
 
+	count = 0;
 	if (n < 10)
 		count += printchar(n + '0');
 	else

@@ -12,10 +12,13 @@
 
 #include "printf.h"
 
-int	printptr(void *)
+int	printptr(void *ptr)
 {
-	int count;
-
-	count = 0;
-	return count;
+	ptr = malloc(sizeof(void *));
+	if (!ptr)
+		return -1;
+	printstr("0x");
+	printlowx((long)&ptr);
+	return 0;
+	free(ptr);
 }

@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINFT_H
+#ifndef PRINTF_H
 # define PRINTF_H
 
-#include <stdarg.h>
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <limits.h>
+# include <stdarg.h>
+# include <stdio.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <limits.h>
 
 int	printchar(int c);
 int	printstr(char *str);
@@ -27,7 +27,6 @@ int	printupx(long nbr);
 int	printu(unsigned int n);
 int	ft_printf(const char *format, ...);
 int	printpercent(int c);
+int	printptr(void *ptr);
 
-
-
-# endif
+#endif

@@ -14,8 +14,8 @@
 
 int	printdig(long nbr)
 {
-	int count;
-	char *symbs;
+	int		count;
+	char	*symbs;
 
 	symbs = "0123456789";
 	count = 0;
@@ -27,8 +27,8 @@ int	printdig(long nbr)
 	else if (nbr < 10)
 		return (printchar(symbs[nbr]));
 	else
-		{
-			count = printdig(nbr / 10);
-			return (count + printdig(nbr % 10));
-		}
+	{
+		count = printdig(nbr / 10);
+		return (count + printdig(nbr % 10));
+	}
 }

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printlowx.c                                         :+:      :+:    :+:   */
+/*   printlowx.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: duandrad <duandrad@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -14,8 +14,8 @@
 
 int	printlowx(long nbr)
 {
-	int	count;
-	char *symbs;
+	int		count;
+	char	*symbs;
 
 	symbs = "0123456789abcdef";
 	count = 0;
@@ -27,8 +27,8 @@ int	printlowx(long nbr)
 	else if (nbr < 16)
 		return (printchar(symbs[nbr]));
 	else
-		{
-			count = printlowx(nbr / 16);
-			return (count + printlowx(nbr % 16));
-		}
+	{
+		count = printlowx(nbr / 16);
+		return (count + printlowx(nbr % 16));
+	}
 }

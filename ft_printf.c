@@ -21,13 +21,11 @@ int	print_format(char type, va_list pt)
 		count += printchar(va_arg(pt, int));
 	else if (type == 's')
 		count += printstr(va_arg(pt, char *));
-	/*else if (type == 'p')
-		count += printptr(va_arg(pt, void *));*/
-	else if (type == 'd')
+	else if (type == 'p')
+		count += printptr(va_arg(pt, void *));
+	else if (type == 'd' || type == 'i')
 		count += printdig((long)va_arg(pt, int));
-	/*else if (type == 'i')
-		count += printint(va_arg(pt, int), 10);
-	*/else if (type == 'u')
+	else if (type == 'u')
 		count += printu(va_arg(pt, unsigned int));
 	else if (type == 'x')
 		count += printlowx((long)va_arg(pt, unsigned int));
@@ -36,8 +34,8 @@ int	print_format(char type, va_list pt)
 	else if (type == '%')
 		count += printpercent(va_arg(pt, int));
 	return (count);
-
 }
+
 int	ft_printf(const char *format, ...)
 {
 	int		count;
@@ -56,8 +54,10 @@ int	ft_printf(const char *format, ...)
 	va_end(pt);
 	return (count);
 }
+/* 
 int main(void)
 {
+	void *ola;
 
 	printf(":%%:\n");
 	ft_printf(":%%:\n");
@@ -65,13 +65,17 @@ int main(void)
 	ft_printf(":%c:\n", 'c');
 	printf(":%s:\n", "ola");
 	ft_printf(":%s:\n", "ola");
-	printf(":%d:\n", 32);
-	ft_printf(":%d:\n", 32);
+	printf(":%d:\n", 10);
+	ft_printf(":%d:\n", 10);
 	printf(":%u:\n", UINT_MAX);
 	ft_printf(":%u:\n", UINT_MAX);
 	printf(":%x:\n", 42);
 	ft_printf(":%x:\n", 42);
 	printf(":%X:\n", 42);
 	ft_printf(":%X:\n", 42);
+	printf(":%i:\n", 010);
+	ft_printf(":%i:\n", 010);
+	printf(":%p:\n", &ola);
+	ft_printf(":%p:\n", &ola);
 	return 0;
-}
+} */

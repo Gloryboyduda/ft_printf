@@ -14,8 +14,8 @@
 
 int	printupx(long nbr)
 {
-	int	count;
-	char *symbs;
+	int		count;
+	char	*symbs;
 
 	symbs = "0123456789ABCDEF";
 	count = 0;
@@ -27,8 +27,8 @@ int	printupx(long nbr)
 	else if (nbr < 16)
 		return (printchar(symbs[nbr]));
 	else
-		{
-			count = printupx(nbr / 16);
-			return (count + printupx(nbr % 16));
-		}
+	{
+		count = printupx(nbr / 16);
+		return (count + printupx(nbr % 16));
+	}
 }
