@@ -6,7 +6,7 @@
 /*   By: duandrad <duandrad@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 14:19:32 by duandrad          #+#    #+#             */
-/*   Updated: 2024/11/18 18:06:08 by duandrad         ###   ########.fr       */
+/*   Updated: 2024/11/18 18:17:29 by duandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,13 @@ int	print_format(char type, va_list pt)
 	return (count);
 }
 
-int	ft_printf(const char *format, ...)
+int	ft_printf(const char *format,int g, ...)
 {
 	int		count;
 	va_list	pt;
 
+	if (!format)
+                return (-1);
 	va_start(pt, format);
 	count = 0;
 	while (*format)
