@@ -6,7 +6,7 @@
 /*   By: duandrad <duandrad@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 14:19:32 by duandrad          #+#    #+#             */
-/*   Updated: 2024/11/18 18:17:29 by duandrad         ###   ########.fr       */
+/*   Updated: 2024/11/18 18:22:49 by duandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,13 @@ int	print_format(char type, va_list pt)
 	return (count);
 }
 
-int	ft_printf(const char *format,int g, ...)
+int	ft_printf(const char *format, ...)
 {
 	int		count;
 	va_list	pt;
 
 	if (!format)
-                return (-1);
+		return (-1);
 	va_start(pt, format);
 	count = 0;
 	while (*format)
@@ -78,7 +78,5 @@ int main(void)
 	ft_printf(":%i:\n", 010);
 	printf(":%p %p:\n", (void *)LONG_MIN, (void *)LONG_MAX);
 	ft_printf(":%p %p:\n", (void *)LONG_MIN, (void *)LONG_MAX);
-	printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%%%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%\n", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0);
-	ft_printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%%%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%\n", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0);
 	return 0;
 }*/
