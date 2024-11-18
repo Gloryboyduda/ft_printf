@@ -6,7 +6,7 @@
 /*   By: duandrad <duandrad@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 14:19:32 by duandrad          #+#    #+#             */
-/*   Updated: 2024/11/18 13:48:06 by duandrad         ###   ########.fr       */
+/*   Updated: 2024/11/18 18:06:08 by duandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	print_format(char type, va_list pt)
 	else if (type == 'X')
 		count += printupx((long)va_arg(pt, unsigned int));
 	else if (type == '%')
-		count += printpercent(va_arg(pt, int));
+		count += write(1, "%", 1);
 	return (count);
 }
 
@@ -57,8 +57,6 @@ int	ft_printf(const char *format, ...)
 /*
 int main(void)
 {
-	int nbr;
-	int n;
 
 	printf(":%%:\n");
 	ft_printf(":%%:\n");
@@ -76,7 +74,9 @@ int main(void)
 	ft_printf(":%X:\n", 42);
 	printf(":%i:\n", 010);
 	ft_printf(":%i:\n", 010);
-	printf(":%p %p:\n", &nbr, &n);
-	ft_printf(":%p %p:\n", &nbr, &n);
+	printf(":%p %p:\n", (void *)LONG_MIN, (void *)LONG_MAX);
+	ft_printf(":%p %p:\n", (void *)LONG_MIN, (void *)LONG_MAX);
+	printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%%%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%\n", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0);
+	ft_printf("%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%%%%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %%%c%%%s%%%d%%%i%%%u%%%x%%%X%%%% %c%%\n", 'A', "42", 42, 42 ,42 , 42, 42, 'B', "-42", -42, -42 ,-42 ,-42, 42, 'C', "0", 0, 0 ,0 ,0, 42, 0);
 	return 0;
 }*/

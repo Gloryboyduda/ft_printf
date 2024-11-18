@@ -6,7 +6,7 @@
 /*   By: duandrad <duandrad@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 19:34:30 by duandrad          #+#    #+#             */
-/*   Updated: 2024/11/18 13:54:21 by duandrad         ###   ########.fr       */
+/*   Updated: 2024/11/18 15:55:27 by duandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ int	printptr(void *ptr)
 		return (printstr("(nil)"));
 	count = printstr("0x");
 	count += printlowx((unsigned long)ptr);
-	return (count);
+	return ((unsigned long)count);
 }

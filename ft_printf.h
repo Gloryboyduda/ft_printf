@@ -6,7 +6,7 @@
 /*   By: duandrad <duandrad@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 14:55:29 by duandrad          #+#    #+#             */
-/*   Updated: 2024/11/18 13:37:50 by duandrad         ###   ########.fr       */
+/*   Updated: 2024/11/18 16:25:56 by duandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@
 int	printchar(int c);
 int	printstr(char *str);
 int	printdig(long nbr);
-int	printlowx(long nbr);
-int	printupx(long nbr);
+int	printlowx(unsigned long nbr);
+int	printupx(unsigned long nbr);
 int	printu(unsigned int n);
 int	ft_printf(const char *format, ...);
 int	printpercent(int c);
