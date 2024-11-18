@@ -6,7 +6,7 @@
 /*   By: duandrad <duandrad@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 19:33:36 by duandrad          #+#    #+#             */
-/*   Updated: 2024/11/17 21:24:09 by duandrad         ###   ########.fr       */
+/*   Updated: 2024/11/18 12:38:53 by duandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	printstr(char *str)
 {
 	int	i;
 
+	if (!str)
+		return (printstr("(null)"));
 	i = 0;
 	while (str[i])
 	{
