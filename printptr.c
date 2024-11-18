@@ -6,7 +6,7 @@
 /*   By: duandrad <duandrad@student.42lisboa>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 19:34:30 by duandrad          #+#    #+#             */
-/*   Updated: 2024/11/17 21:48:06 by duandrad         ###   ########.fr       */
+/*   Updated: 2024/11/18 02:57:08 by duandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 int	printptr(void *ptr)
 {
-	ptr = malloc(sizeof(void *));
-	if (!ptr)
-		return (-1);
+	int	count;
+
+	count = 0;
 	printstr("0x");
-	printlowx((long)&ptr);
-	return (0);
-	free(ptr);
+	count += printlowx((long)ptr);
+	return (count);
 }

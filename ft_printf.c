@@ -6,7 +6,7 @@
 /*   By: duandrad <duandrad@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 14:19:32 by duandrad          #+#    #+#             */
-/*   Updated: 2024/11/17 21:22:04 by duandrad         ###   ########.fr       */
+/*   Updated: 2024/11/18 02:59:07 by duandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,11 @@ int	ft_printf(const char *format, ...)
 	va_end(pt);
 	return (count);
 }
-/* 
+/*
 int main(void)
 {
-	void *ola;
+	int nbr;
+	int n;
 
 	printf(":%%:\n");
 	ft_printf(":%%:\n");
@@ -75,7 +76,7 @@ int main(void)
 	ft_printf(":%X:\n", 42);
 	printf(":%i:\n", 010);
 	ft_printf(":%i:\n", 010);
-	printf(":%p:\n", &ola);
-	ft_printf(":%p:\n", &ola);
+	printf(":%p %p:\n", &nbr, &n);
+	ft_printf(":%p %p:\n", &nbr, &n);
 	return 0;
-} */
+}*/
