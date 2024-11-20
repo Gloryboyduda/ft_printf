@@ -6,7 +6,7 @@
 /*   By: duandrad <duandrad@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 14:19:32 by duandrad          #+#    #+#             */
-/*   Updated: 2024/11/20 18:07:05 by duandrad         ###   ########.fr       */
+/*   Updated: 2024/11/20 18:47:25 by duandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ int	print_format(char type, va_list pt)
 
 int	ft_printf(const char *format, ...)
 {
-	int		count;
+	int	count;
 	va_list	pt;
-	int ret;
+	int	ret;
 
 	if (!format)
 		return (-1);
@@ -54,7 +54,7 @@ int	ft_printf(const char *format, ...)
 			if (ret < 0)
 				return (-1);
 			count += ret;
-		
+		}
 		else
 			count += write(1, format, 1);
 		++format;
