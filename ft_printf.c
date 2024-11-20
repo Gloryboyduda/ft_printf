@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: duandrad <duandrad@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: duandrad <duandrad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 14:19:32 by duandrad          #+#    #+#             */
-/*   Updated: 2024/11/20 18:47:25 by duandrad         ###   ########.fr       */
+/*   Updated: 2024/11/20 18:52:54 by duandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ int	print_format(char type, va_list pt)
 
 int	ft_printf(const char *format, ...)
 {
-	int	count;
+	int		count;
 	va_list	pt;
-	int	ret;
+	int		ret;
 
 	if (!format)
 		return (-1);
