@@ -1,4 +1,16 @@
-#include "ft_printf.h" 
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: duandrad <duandrad@student.42lisboa>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/19 15:48:43 by duandrad          #+#    #+#             */
+/*   Updated: 2024/11/19 15:48:47 by duandrad         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*#include "ft_printf.h" 
 int main(void)
 {
         printf(":%%:\n");
@@ -21,4 +33,4 @@ int main(void)
         ft_printf(":%p %p:\n", (void *)LONG_MIN, (void *)LONG_MAX);
         ft_printf(":%d %d:\n", );
 	return 0;
-}
+}*/
