@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: duandrad <duandrad@student.42.fr>          +#+  +:+       +#+        */
+/*   By: duandrad <duandrad@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 15:48:43 by duandrad          #+#    #+#             */
-/*   Updated: 2024/11/20 19:16:52 by duandrad         ###   ########.fr       */
+/*   Updated: 2024/11/25 14:44:11 by duandrad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-#include "ft_printf.h" 
+/* #include "ft_printf.h" 
 
 int main(void)
 {
@@ -33,9 +32,15 @@ int main(void)
 	ft_printf(":%X:\n", 42);
 	printf(":%%:\n");
 	ft_printf(":%%:\n");
-	printf(":%% %c %i %d, %u %p    %s %x %X:\n", 'c', 010, INT_MAX, UINT_MAX,
-	 (void *)LONG_MAX, "40edois", 42, 42);
-	ft_printf(":%% %c %i %d, %u %p    %s %x %X:\n", 'c', 010, INT_MAX, UINT_MAX,
-	 (void *)LONG_MAX, "40edois", 42, 42);
+	int i = printf(":%% %c %i %d, %u %p    %s %x %X:\n", 'c', 010,
+	 INT_MAX, UINT_MAX,
+	(void *)LONG_MAX, "40edois", 42, 42);
+	int j = ft_printf(":%% %c %i %d, %u %p    %s %x %X:\n", 'c', 010,
+	 INT_MAX, UINT_MAX,
+	(void *)LONG_MAX, "40edois", 42, 42);
+	printf(":%d:\n", i);
+	ft_printf(":%d:\n", j);
+	printf(":%d: :%i: :%s: :%p:\n", 0, INT_MIN, "", (void *)NULL);
+	ft_printf(":%d: :%i: :%s: :%p:\n", 0, INT_MIN, "", (void *)NULL);
 	return 0;
-}*/
+} */
