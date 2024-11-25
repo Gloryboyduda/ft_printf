@@ -1,5 +1,0 @@
-- 👋 Hi, I’m Duarte
-- 👀 I’m interested in Computer Science
-- 🌱 I’m currently learning C
-- 🏫 I'm a student at 42 Lisboa
-- 🖨️ ft_printf is a replication of the original printf function from C library.
