@@ -12,25 +12,25 @@
 
 #include "ft_printf.h"
 
-int	print_format(char type, va_list pt)
+int	print_format(char type, va_list *pt)
 {
 	int	count;
 
 	count = 0;
 	if (type == 'c')
-		count += printchar(va_arg(pt, int));
+		count += printchar(va_arg(*pt, int));
 	else if (type == 's')
-		count += printstr(va_arg(pt, char *));
+		count += printstr(va_arg(*pt, char *));
 	else if (type == 'p')
-		count += printptr(va_arg(pt, void *));
+		count += printptr(va_arg(*pt, void *));
 	else if (type == 'd' || type == 'i')
-		count += printdig((long)va_arg(pt, int));
+		count += printdig((long)va_arg(*pt, int));
 	else if (type == 'u')
-		count += printu(va_arg(pt, unsigned int));
+		count += printu(va_arg(*pt, unsigned int));
 	else if (type == 'x')
-		count += printlowx((long)va_arg(pt, unsigned int));
+		count += printlowx((long)va_arg(*pt, unsigned int));
 	else if (type == 'X')
-		count += printupx((long)va_arg(pt, unsigned int));
+		count += printupx((long)va_arg(*pt, unsigned int));
 	else if (type == '%')
 		count += write(1, "%", 1);
 	return (count);
@@ -50,7 +50,7 @@ int	ft_printf(const char *format, ...)
 	{
 		if (*format == '%')
 		{
-			ret = print_format(*(++format), pt);
+			ret = print_format(*(++format), &pt);
 			if (ret < 0)
 				return (-1);
 			count += ret;
